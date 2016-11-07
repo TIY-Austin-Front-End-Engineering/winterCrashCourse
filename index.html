@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Snowoman Generator</title>
+		<link rel="stylesheet" href="main.css">
+	</head>
+	<body>
+		<h1>Build a Snowman!</h1>
+		<form class="parts-list">
+			<fieldset class="bodies">
+				<input class="prev" type="button" value="<">
+					<ul class="part-subset">
+						<li class="curr"></li>
+						<li class="next"></li>
+						<li></li>
+						<li class="prev"></li>
+					</ul>
+				<input class="next" type="button" value=">">
+			</fieldset>
+			<fieldset class="hats">
+				<input class="prev" type="button" value="<">
+				<ul class="part-subset">
+						<li class="curr"></li>
+						<li class="next"></li>
+						<li></li>
+						<li class="prev"></li>
+					</ul>
+				<input class="next" type="button" value=">">
+			</fieldset>
+			<fieldset class="friends">
+				<input class="prev" type="button" value="<">
+				<ul class="part-subset">
+						<li class="curr"></li>
+						<li class="next"></li>
+						<li></li>
+						<li class="prev"></li>
+					</ul>
+				<input class="next" type="button" value=">">
+			</fieldset>
+			<input type="text" id="snowman-name" name="snowman-name" placeholder="Name Your Snowman">
+			<input type="submit" id="submit" name="submit" value="Save Your Snowman">
+		</form>
+		<section class="snowman-display">
+			<div class="current-snowman">
+				<div class="snowman-image">
+
+				</div>
+				<h2>snowman name<h2>
+			</div>
+			<ul class="all-snowmen">
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+			</ul>
+		</section>
+	</body>
+</html>

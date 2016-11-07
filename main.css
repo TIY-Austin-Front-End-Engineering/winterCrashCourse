@@ -1,0 +1,129 @@
+body, h2, h1 {
+	margin: 0;
+	font-family: 'Helvetica', sans-serif;
+}
+
+h1 {
+	height: 10vh;
+	box-sizing: border-box;
+	text-align: center;
+	line-height: 200%;
+}
+
+.parts-list {
+	width: 35%;
+	float: left;
+	height: 90vh;
+	background: pink;
+}
+
+.parts-list fieldset {
+	height: 29%;
+	border: 0;
+	box-sizing: border-box;
+	position: relative;
+}
+
+input.prev, input.next {
+	position: absolute;
+	top: calc(50% - 1rem);
+	height: 2rem;
+	display: block;
+	z-index: 1;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+}
+
+input.prev {
+	left: 0;
+}
+
+input.next {
+	right: 0;
+}
+
+.part-subset {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	height: 100%;
+	overflow: hidden;
+	position: relative;
+	border: 1px solid red;
+}
+
+.part-subset li {
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	display: none;
+	transition: left 5s;
+}
+
+.part-subset .curr {
+	left: 0;
+	display: block;
+}
+
+.part-subset .next {
+	left: 100%;
+	display: block;
+}
+
+.part-subset .prev {
+	left: -100%;
+	display: block;
+}
+
+#snowman-name, #submit {
+	height: 8%;
+	display: block;
+	width: 100%;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	box-sizing: border-box;
+}
+
+#snowman-name {
+	height: 5%;
+}
+
+.snowman-display {
+	width: 65%;
+	float: left;
+	height: 90vh;
+	background: turquoise;
+}
+
+.current-snowman {
+	height: 87%;
+}
+
+.snowman-image {
+	height: 90%;
+}
+
+.current-snowman h2 {
+	height: 10%;
+	line-height: 200%;
+	text-align: center;
+}
+
+.all-snowmen {
+	height: 13%;
+	overflow-x: scroll;
+	overflow-y: hidden;
+	margin: 0;
+	white-space: nowrap;
+	box-sizing: border-box;
+	padding: 0;
+	font-size: 0;
+}
+
+.all-snowmen li {
+	background: dodgerblue;
+	border: 1px solid red;
+	display: inline-block;
+	height: 100%;
+	width: 25%;
+}
