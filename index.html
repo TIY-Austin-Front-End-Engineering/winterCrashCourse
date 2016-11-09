@@ -9,34 +9,37 @@
 		<h1>Build a Snowman!</h1>
 		<form class="parts-list">
 			<fieldset class="bodies">
-				<input class="prev" type="button" value="<">
 					<ul class="part-subset">
-						<li class="curr"></li>
-						<li class="next"></li>
+						<input class="prev" type="button" value="<">
 						<li></li>
-						<li class="prev"></li>
+						<li></li>
+						<li></li>
+						<li></li>
+						<li></li>
+						<input class="next" type="button" value=">">
 					</ul>
-				<input class="next" type="button" value=">">
 			</fieldset>
 			<fieldset class="hats">
-				<input class="prev" type="button" value="<">
 				<ul class="part-subset">
-						<li class="curr"></li>
-						<li class="next"></li>
-						<li></li>
-						<li class="prev"></li>
+					<input class="prev" type="button" value="<">
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+					<input class="next" type="button" value=">">
 					</ul>
-				<input class="next" type="button" value=">">
 			</fieldset>
 			<fieldset class="friends">
-				<input class="prev" type="button" value="<">
 				<ul class="part-subset">
-						<li class="curr"></li>
-						<li class="next"></li>
-						<li></li>
-						<li class="prev"></li>
+					<input class="prev" type="button" value="<">
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+					<input class="next" type="button" value=">">
 					</ul>
-				<input class="next" type="button" value=">">
 			</fieldset>
 			<input type="text" id="snowman-name" name="snowman-name" placeholder="Name Your Snowman">
 			<input type="submit" id="submit" name="submit" value="Save Your Snowman">
@@ -44,16 +47,32 @@
 		<section class="snowman-display">
 			<div class="current-snowman">
 				<div class="snowman-image">
-
+					<ul class="backgrounds">
+						<input class="prev" type="button" value="<">
+						<li></li>
+						<li></li>
+						<li></li>
+						<li></li>
+						<li></li>
+						<input class="next" type="button" value=">">
+					</ul>
+					<img class="snowman-body">
+					<ul class="layers">
+						<li class="head"></li>
+						<li class="torso"></li>
+						<li class="bottom"></li>
+					</ul>
 				</div>
-				<h2>snowman name<h2>
+				<h2>snowman name</h2>
 			</div>
 			<ul class="all-snowmen">
+				<input class="prev" type="button" value="<">
 				<li></li>
 				<li></li>
 				<li></li>
 				<li></li>
 				<li></li>
+				<input class="next" type="button" value=">">
 			</ul>
 		</section>
 	</body>
