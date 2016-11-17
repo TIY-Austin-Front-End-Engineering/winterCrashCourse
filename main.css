@@ -1,6 +1,16 @@
+/***********/
+/*  basic  */
+/***********/
+
 body, h2, h1 {
 	margin: 0;
 	font-family: 'Helvetica', sans-serif;
+}
+
+ul {
+	list-style: none;
+	padding: 0;
+	margin: 0;
 }
 
 h1 {
@@ -10,70 +20,49 @@ h1 {
 	line-height: 200%;
 }
 
+/****************/
+/*  parts list  */
+/****************/
+
 .parts-list {
-	width: 35%;
 	float: left;
+	width: 35%;
 	height: 90vh;
-	background: pink;
-}
-
-.parts-list fieldset {
-	height: 29%;
-	border: 0;
+	overflow: hidden;
 	box-sizing: border-box;
-	position: relative;
-}
-
-input.prev, input.next {
-	position: absolute;
-	top: calc(50% - 1rem);
-	height: 2rem;
-	display: block;
-	z-index: 1;
-	-webkit-appearance: none;
-	-moz-appearance: none;
-}
-
-input.prev {
-	left: 0;
-}
-
-input.next {
-	right: 0;
 }
 
 .part-subset {
-	margin: 0;
-	padding: 0;
-	list-style: none;
-	height: 100%;
-	overflow: hidden;
-	position: relative;
-	border: 1px solid red;
+	height: 29%;
+	overflow-y: hidden;
 }
 
 .part-subset li {
-	position: absolute;
+	width: 25%;
+}
+
+.part-subset li::after {
+	content: '';
+	display: inline-block;
+	vertical-align: middle;
 	height: 100%;
-	width: 100%;
-	display: none;
-	transition: left 5s;
 }
 
-.part-subset .curr {
-	left: 0;
-	display: block;
+.part-subset button {
+	max-width: 100%;
+	display: inline-block;
+	background-color: transparent;
+	border: 0;
+	vertical-align: middle;
 }
 
-.part-subset .next {
-	left: 100%;
-	display: block;
+.part-subset img {
+	max-width: 100%;
 }
 
-.part-subset .prev {
-	left: -100%;
-	display: block;
-}
+/******************/
+/*  snowman area  */
+/******************/
 
 #snowman-name, #submit {
 	height: 8%;
@@ -101,6 +90,22 @@ input.next {
 
 .snowman-image {
 	height: 90%;
+	position: relative;
+}
+
+.snowman-image img {
+	position: absolute;
+	top: 0;
+	height: 100%;
+	left: 50%;
+	transform: translateX(-50%);
+}
+
+.layers, .head, .torso, .bottom {
+	position: absolute;
+	top: 0;
+	height: 100%;
+	width: 100%;
 }
 
 .current-snowman h2 {
@@ -109,21 +114,93 @@ input.next {
 	text-align: center;
 }
 
-.all-snowmen {
-	height: 13%;
-	overflow-x: scroll;
-	overflow-y: hidden;
-	margin: 0;
-	white-space: nowrap;
-	box-sizing: border-box;
-	padding: 0;
-	font-size: 0;
+.snowman-background {
+	height: 100%;
+	position: relative;
 }
 
-.all-snowmen li {
-	background: dodgerblue;
-	border: 1px solid red;
-	display: inline-block;
+.snowman-background .prev {
+	left: 0;
+}
+
+.snowman-background .next {
+	right: 0;
+}
+
+.backgrounds {
 	height: 100%;
-	width: 25%;
+	overflow-y: hidden;
+}
+
+.backgrounds li {
+	background-image: url('images/background.png');
+	height: 100%;
+}
+
+.snowman-name {
+	text-align: center;
+	line-height: 8.1vh;
+}
+
+/**********************/
+/*  all snowmen list  */
+/**********************/
+
+.all-snowmen {
+	height: 13%;
+}
+
+.all-snowmen {
+	height: 100%;
+	box-sizing: border-box;
+}
+.snowman-list {
+	height: 10%;
+}
+
+input.prev, input.next {
+	position: absolute;
+	top: calc(50% - 1rem);
+	height: 2rem;
+	display: block;
+	z-index: 1;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+}
+
+/*********************/
+/*  scrollable list  */
+/*********************/
+
+.scroll-list {
+	position: relative;
+	box-sizing: border-box;
+}
+
+.scroll-list {
+	margin: 0 auto;
+	padding: 0;
+	list-style: none;
+	overflow-x: scroll;
+	overflow-y: hidden;
+	border: 1px solid red;
+	white-space: nowrap;
+}
+
+.scroll-list li {
+	background-color: orange;
+	height: 100%;
+	display: inline-block;
+}
+
+.scroll-list input.prev {
+	left: 0;
+}
+
+.scroll-list input.next {
+	right: 0;
+}
+
+.scroll-list::webkit-scrollbar:horizontal {
+	/*background: pink;*/
 }

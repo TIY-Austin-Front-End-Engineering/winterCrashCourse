@@ -7,73 +7,53 @@
 	</head>
 	<body>
 		<h1>Build a Snowman!</h1>
-		<form class="parts-list">
-			<fieldset class="bodies">
-					<ul class="part-subset">
-						<input class="prev" type="button" value="<">
-						<li></li>
-						<li></li>
-						<li></li>
-						<li></li>
-						<li></li>
-						<input class="next" type="button" value=">">
-					</ul>
-			</fieldset>
-			<fieldset class="hats">
-				<ul class="part-subset">
-					<input class="prev" type="button" value="<">
-					<li></li>
-					<li></li>
-					<li></li>
-					<li></li>
-					<li></li>
-					<input class="next" type="button" value=">">
-					</ul>
-			</fieldset>
-			<fieldset class="friends">
-				<ul class="part-subset">
-					<input class="prev" type="button" value="<">
-					<li></li>
-					<li></li>
-					<li></li>
-					<li></li>
-					<li></li>
-					<input class="next" type="button" value=">">
-					</ul>
-			</fieldset>
+		<div class="parts-list">
+			<ul class="scroll-list part-subset upper-bodies">
+				<li><button><img src="images/head.png" alt="head" /></button></li>
+				<li><button><img src="images/head.png" alt="head" /></button></li>
+				<li><button><img src="images/head.png" alt="head" /></button></li>
+				<li><button><img src="images/head.png" alt="head" /></button></li>
+				<li><button><img src="images/head.png" alt="head" /></button></li>
+			</ul>
+			<ul class="scroll-list part-subset mid-bodies">
+				<li><button><img src="images/torso.png" alt="torso" /></button></li>
+				<li><button><img src="images/torso.png" alt="torso" /></button></li>
+				<li><button><img src="images/torso.png" alt="torso" /></button></li>
+				<li><button><img src="images/torso.png" alt="torso" /></button></li>
+				<li><button><img src="images/torso.png" alt="torso" /></button></li>
+			</ul>
+			<ul class="scroll-list part-subset lower-bodies">
+				<li><button><img src="images/bottom.png" alt="bottom" /></button></li>
+				<li><button><img src="images/bottom.png" alt="bottom" /></button></li>
+				<li><button><img src="images/bottom.png" alt="bottom" /></button></li>
+				<li><button><img src="images/bottom.png" alt="bottom" /></button></li>
+				<li><button><img src="images/bottom.png" alt="bottom" /></button></li>
+			</ul>
 			<input type="text" id="snowman-name" name="snowman-name" placeholder="Name Your Snowman">
 			<input type="submit" id="submit" name="submit" value="Save Your Snowman">
-		</form>
+		</div>
 		<section class="snowman-display">
-			<div class="current-snowman">
 				<div class="snowman-image">
-					<ul class="backgrounds">
+					<div class="snowman-background">
 						<input class="prev" type="button" value="<">
-						<li></li>
-						<li></li>
-						<li></li>
-						<li></li>
-						<li></li>
+						<ul class="backgrounds">
+							<li></li>
+							<li></li>
+							<li></li>
+							<li></li>
+							<li></li>
+						</ul>
 						<input class="next" type="button" value=">">
-					</ul>
-					<img class="snowman-body">
+					</div>
+					<img src="images/snowman.png" class="snowman-layer">
 					<ul class="layers">
 						<li class="head"></li>
 						<li class="torso"></li>
 						<li class="bottom"></li>
 					</ul>
 				</div>
-				<h2>snowman name</h2>
-			</div>
-			<ul class="all-snowmen">
-				<input class="prev" type="button" value="<">
-				<li></li>
-				<li></li>
-				<li></li>
-				<li></li>
-				<li></li>
-				<input class="next" type="button" value=">">
-			</ul>
+				<h2 class="snowman-name">snowman name</h2>
 		</section>
+		<script src="main.js" charset="utf-8"></script>
 	</body>
 </html>
