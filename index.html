@@ -2,58 +2,74 @@
 <html>
 	<head>
 		<meta charset="utf-8">
-		<title>Snowoman Generator</title>
+		<title>Snowman Generator</title>
+		<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700" rel="stylesheet">
+		<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
 		<link rel="stylesheet" href="main.css">
 	</head>
 	<body>
-		<h1>Build a Snowman!</h1>
-		<div class="parts-list">
-			<ul class="scroll-list part-subset upper-bodies">
-				<li><button><img src="images/head.png" alt="head" /></button></li>
-				<li><button><img src="images/head.png" alt="head" /></button></li>
-				<li><button><img src="images/head.png" alt="head" /></button></li>
-				<li><button><img src="images/head.png" alt="head" /></button></li>
-				<li><button><img src="images/head.png" alt="head" /></button></li>
-			</ul>
-			<ul class="scroll-list part-subset mid-bodies">
-				<li><button><img src="images/torso.png" alt="torso" /></button></li>
-				<li><button><img src="images/torso.png" alt="torso" /></button></li>
-				<li><button><img src="images/torso.png" alt="torso" /></button></li>
-				<li><button><img src="images/torso.png" alt="torso" /></button></li>
-				<li><button><img src="images/torso.png" alt="torso" /></button></li>
-			</ul>
-			<ul class="scroll-list part-subset lower-bodies">
-				<li><button><img src="images/bottom.png" alt="bottom" /></button></li>
-				<li><button><img src="images/bottom.png" alt="bottom" /></button></li>
-				<li><button><img src="images/bottom.png" alt="bottom" /></button></li>
-				<li><button><img src="images/bottom.png" alt="bottom" /></button></li>
-				<li><button><img src="images/bottom.png" alt="bottom" /></button></li>
-			</ul>
-			<input type="text" id="snowman-name" name="snowman-name" placeholder="Name Your Snowman">
-			<input type="submit" id="submit" name="submit" value="Save Your Snowman">
-		</div>
-		<section class="snowman-display">
-				<div class="snowman-image">
-					<div class="snowman-background">
-						<input class="prev" type="button" value="<">
-						<ul class="backgrounds">
-							<li></li>
-							<li></li>
-							<li></li>
-							<li></li>
-							<li></li>
-						</ul>
-						<input class="next" type="button" value=">">
-					</div>
-					<img src="images/snowman.png" class="snowman-layer">
-					<ul class="layers">
-						<li class="head"></li>
-						<li class="torso"></li>
-						<li class="bottom"></li>
+		<header>
+			<div class="container">
+				<h1 class="logo-title"><i class="fa fa-snowflake-o" aria-hidden="true"></i>
+Build a Snowman <i class="fa fa-snowflake-o" aria-hidden="true"></i></h1>
+			</div>
+		</header>
+		<section class="snowman-builder-area">
+			<div class="container">
+				<div class="parts-list">
+					<ul class="scroll-list part-subset upper-bodies">
+						<li><button><img src="images/head.png" alt="head" /></button></li>
+						<li><button><img src="images/head.png" alt="head" /></button></li>
+						<li><button><img src="images/head.png" alt="head" /></button></li>
+						<li><button><img src="images/head.png" alt="head" /></button></li>
+						<li><button><img src="images/head.png" alt="head" /></button></li>
 					</ul>
+					<hr class="divider">
+					<ul class="scroll-list part-subset mid-bodies">
+						<li><button><img src="images/torso.png" alt="torso" /></button></li>
+						<li><button><img src="images/torso.png" alt="torso" /></button></li>
+						<li><button><img src="images/torso.png" alt="torso" /></button></li>
+						<li><button><img src="images/torso.png" alt="torso" /></button></li>
+						<li><button><img src="images/torso.png" alt="torso" /></button></li>
+					</ul>
+					<hr class="divider">
+					<ul class="scroll-list part-subset lower-bodies">
+						<li><button><img src="images/bottom.png" alt="bottom" /></button></li>
+						<li><button><img src="images/bottom.png" alt="bottom" /></button></li>
+						<li><button><img src="images/bottom.png" alt="bottom" /></button></li>
+						<li><button><img src="images/bottom.png" alt="bottom" /></button></li>
+						<li><button><img src="images/bottom.png" alt="bottom" /></button></li>
+					</ul>
+					<hr class="divider">
+					<h2 class="snowman-name">Snowman Name</h2>
+					<input type="text" id="snowman-name" name="snowman-name" placeholder="Name Your Snowman">
+					<input type="submit" id="submit" name="submit" value="Save Your Snowman">
 				</div>
-				<h2 class="snowman-name">snowman name</h2>
+				<section class="snowman-display">
+						<div class="snowman-image">
+							<div class="snowman-background">
+								<input class="prev" type="button" value="<">
+								<ul class="backgrounds">
+									<li></li>
+									<li></li>
+									<li></li>
+									<li></li>
+									<li></li>
+								</ul>
+								<input class="next" type="button" value=">">
+							</div>
+							<img src="images/snowman.png" class="snowman-layer">
+							<ul class="layers">
+								<li class="head"></li>
+								<li class="torso"></li>
+								<li class="bottom"></li>
+							</ul>
+						</div>
+				</section>
+			</div>
 		</section>
-		<script src="main.js" charset="utf-8"></script>
+		<footer>
+			<script src="main.js" charset="utf-8"></script>
+		</footer>
 	</body>
 </html>

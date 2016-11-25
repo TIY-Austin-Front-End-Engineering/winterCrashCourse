@@ -4,7 +4,7 @@
 
 body, h2, h1 {
 	margin: 0;
-	font-family: 'Helvetica', sans-serif;
+	font-family: 'Roboto', sans-serif;
 }
 
 ul {
@@ -14,10 +14,56 @@ ul {
 }
 
 h1 {
-	height: 10vh;
 	box-sizing: border-box;
+	text-align: left;
+}
+
+h2 {
+	box-sizing: border-box;
+	font-size: 20px;
+	font-weight: 300;
+}
+
+.container {
+	width: 960px;
+	margin: 0 auto;
+}
+
+input:focus, button:focus {
+	outline: none;
+}
+
+/****************/
+/*    header    */
+/****************/
+
+header {
+	background: #73D1F5;
+	color: #ffffff;
+	border-bottom: 2px dashed #E85564;
+}
+
+h1.logo-title {
 	text-align: center;
-	line-height: 200%;
+	font-size: 24px;
+	font-weight: 500;
+	padding: 16px 0px;
+}
+
+i.fa.fa-snowflake-o {
+	color: #E85564;
+}
+
+/****************/
+/*  snowman builder  */
+/****************/
+
+.snowman-builder-area {
+	overflow: hidden;
+	background: teal;
+	background-image: url('images/winter-bg.png');
+	background-size: cover;
+	padding: 20px 0;
 }
 
 /****************/
@@ -26,19 +72,17 @@ h1 {
 
 .parts-list {
 	float: left;
-	width: 35%;
-	height: 90vh;
+	width: 540px;
 	overflow: hidden;
 	box-sizing: border-box;
 }
 
 .part-subset {
-	height: 29%;
-	overflow-y: hidden;
+	/*overflow-y: hidden;*/
 }
 
 .part-subset li {
-	width: 25%;
+	width: 105px;
 }
 
 .part-subset li::after {
@@ -60,36 +104,65 @@ h1 {
 	max-width: 100%;
 }
 
+.divider {
+	border: 1px dashed #73D1F5;
+	margin: 12px 10px;
+}
+
+.snowman-name-wrap {
+	width: 540px;
+	float: left;
+	overflow: hidden;
+}
+
 /******************/
 /*  snowman area  */
 /******************/
 
 #snowman-name, #submit {
-	height: 8%;
-	display: block;
-	width: 100%;
+	height: 40px;
+	width: 49%;
+	font-size: 14px;
 	-webkit-appearance: none;
 	-moz-appearance: none;
 	box-sizing: border-box;
+	border-radius: 5px;
 }
 
 #snowman-name {
-	height: 5%;
+	float: left;
+	border: none;
+	padding: 4px 20px;
+	background: #FEFBE8;
+	border: 2px dashed #E85564;
+}
+
+#submit {
+	float: right;
+	color: white;
+	font-weight: 700;
+	text-transform: uppercase;
+	background: #E85564;
+	border: none;
+}
+
+#submit:hover {
+	background: #c94956;
 }
 
 .snowman-display {
-	width: 65%;
+	width: 400px;
 	float: left;
-	height: 90vh;
-	background: turquoise;
+	height: 600px;
+	margin-left: 20px;
 }
 
 .current-snowman {
-	height: 87%;
+	height: 100%;
 }
 
 .snowman-image {
-	height: 90%;
+	height: 100%;
 	position: relative;
 }
 
@@ -137,9 +210,11 @@ h1 {
 	height: 100%;
 }
 
-.snowman-name {
+h2.snowman-name {
+	margin-bottom: 14px;
+	color: #012B5C;
+	font-weight: 500;
 	text-align: center;
-	line-height: 8.1vh;
 }
 
 /**********************/
@@ -166,6 +241,16 @@ input.prev, input.next {
 	z-index: 1;
 	-webkit-appearance: none;
 	-moz-appearance: none;
+	background: rgba(255, 255, 255, 0.5);
+	border: none;
+}
+
+input.prev:hover, input.next:hover {
+	background: rgba(255, 255, 255, 0.7);
+}
+
+input.prev:focus, input.next:focus {
+	outline: none;
 }
 
 /*********************/
@@ -181,16 +266,14 @@ input.prev, input.next {
 	margin: 0 auto;
 	padding: 0;
 	list-style: none;
-	overflow-x: scroll;
-	overflow-y: hidden;
-	border: 1px solid red;
 	white-space: nowrap;
 }
 
 .scroll-list li {
-	background-color: orange;
+	background-color: #FEFBE8;
 	height: 100%;
 	display: inline-block;
+	border-radius: 5px;
 }
 
 .scroll-list input.prev {
