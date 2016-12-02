@@ -16,9 +16,9 @@ nextBg.on('click', function(evt) {
 	var prev = $('li.prev');
 	var curr = $('li.curr');
 	var next = $('li.next');
-	var nextNext = next.nextElementSibling;
-	if (!nextNext) {
-		nextNext = backgroundList[0];
+	var nextNext = next.next();
+	if (nextNext.length === 0) {
+		nextNext = $(backgroundList[0]);
 	}
 	prev.removeClass('prev');
 	curr.addClass('prev');
@@ -26,15 +26,15 @@ nextBg.on('click', function(evt) {
 	next.addClass('curr');
 	next.removeClass('next');
 	nextNext.addClass('next');
-})
+});
 
 prevBg.on('click', function(evt) {
 	var prev = $('li.prev');
 	var curr = $('li.curr');
 	var next = $('li.next');
 	var prevPrev = prev.prev();
-	if (!prevPrev) {
-		prevPrev = backgroundList[backgroundList.length - 1];
+	if (prevPrev.length === 0) {
+		prevPrev = $(backgroundList[backgroundList.length - 1]);
 	}
 	next.removeClass('next');
 	curr.addClass('next');
@@ -77,5 +77,5 @@ save.on('click', function(evt) {
 		data: JSON.stringify(data),
 		contentType: 'application/json',
 		type: 'POST'
-	})
-})
+	});
+});

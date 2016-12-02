@@ -190,6 +190,18 @@ i.fa.fa-snowflake-o {
 	width: 100%;
 }
 
+.head {
+	z-index: 3;
+}
+
+.torso {
+	z-index: 4;
+}
+
+.bottom {
+	z-index: 5;
+}
+
 .current-snowman h2 {
 	height: 10%;
 	line-height: 200%;
@@ -199,14 +211,28 @@ i.fa.fa-snowflake-o {
 .snowman-background {
 	height: 100%;
 	position: relative;
+	overflow: hidden;
 }
 
-.snowman-background .prev {
+.snowman-background li {
+	position: absolute;
+	width: 100%;
+	z-index: 0;
+}
+
+.snowman-background li.curr {
 	left: 0;
+	z-index: 1;
 }
 
-.snowman-background .next {
-	right: 0;
+.snowman-background li.prev {
+	left: -100%;
+	z-index: 3;
+}
+
+.snowman-background li.next {
+	left: 100%;
+	z-index: 3;
 }
 
 .backgrounds {
@@ -218,6 +244,11 @@ i.fa.fa-snowflake-o {
 	height: 100%;
 }
 
+.snowman-layer {
+	position: relative;
+	z-index: 2;
+}
+
 h2.snowman-name {
 	margin-bottom: 14px;
 	color: #012B5C;
@@ -226,20 +257,8 @@ h2.snowman-name {
 }
 
 /**********************/
-/*  all snowmen list  */
+/* Background Buttons */
 /**********************/
-
-.all-snowmen {
-	height: 13%;
-}
-
-.all-snowmen {
-	height: 100%;
-	box-sizing: border-box;
-}
-.snowman-list {
-	height: 10%;
-}
 
 input.prev, input.next {
 	position: absolute;
@@ -251,6 +270,15 @@ input.prev, input.next {
 	-moz-appearance: none;
 	background: rgba(255, 255, 255, 0.5);
 	border: none;
+	z-index: 6;
+}
+
+input.next {
+	right: 0;
+}
+
+input.prev {
+	left: 0;
 }
 
 input.prev:hover, input.next:hover {
