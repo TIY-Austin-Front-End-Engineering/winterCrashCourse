@@ -78,10 +78,19 @@ i.fa.fa-snowflake-o {
 }
 
 .part-subset {
-	/*overflow-y: hidden;*/
+	position: relative;
+	box-sizing: border-box;
+	margin: 0 auto;
+	padding: 0;
+	list-style: none;
+	white-space: nowrap;
 }
 
 .part-subset li {
+	background-color: #FEFBE8;
+	height: 100%;
+	display: inline-block;
+	border-radius: 5px;
 	width: 105px;
 }
 
@@ -206,7 +215,6 @@ i.fa.fa-snowflake-o {
 }
 
 .backgrounds li {
-	background-image: url('images/background.png');
 	height: 100%;
 }
 
@@ -251,39 +259,4 @@ input.prev:hover, input.next:hover {
 
 input.prev:focus, input.next:focus {
 	outline: none;
-}
-
-/*********************/
-/*  scrollable list  */
-/*********************/
-
-.scroll-list {
-	position: relative;
-	box-sizing: border-box;
-}
-
-.scroll-list {
-	margin: 0 auto;
-	padding: 0;
-	list-style: none;
-	white-space: nowrap;
-}
-
-.scroll-list li {
-	background-color: #FEFBE8;
-	height: 100%;
-	display: inline-block;
-	border-radius: 5px;
-}
-
-.scroll-list input.prev {
-	left: 0;
-}
-
-.scroll-list input.next {
-	right: 0;
-}
-
-.scroll-list::webkit-scrollbar:horizontal {
-	/*background: pink;*/
 }

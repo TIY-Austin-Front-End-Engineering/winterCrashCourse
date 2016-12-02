@@ -18,7 +18,7 @@ Build a Snowman <i class="fa fa-snowflake-o" aria-hidden="true"></i></h1>
 		<section class="snowman-builder-area">
 			<div class="container">
 				<div class="parts-list">
-					<ul class="scroll-list part-subset upper-bodies">
+					<ul class="part-subset upper-bodies">
 						<li><button><img src="images/head.png" alt="head" /></button></li>
 						<li><button><img src="images/head.png" alt="head" /></button></li>
 						<li><button><img src="images/head.png" alt="head" /></button></li>
@@ -26,7 +26,7 @@ Build a Snowman <i class="fa fa-snowflake-o" aria-hidden="true"></i></h1>
 						<li><button><img src="images/head.png" alt="head" /></button></li>
 					</ul>
 					<hr class="divider">
-					<ul class="scroll-list part-subset mid-bodies">
+					<ul class="part-subset mid-bodies">
 						<li><button><img src="images/torso.png" alt="torso" /></button></li>
 						<li><button><img src="images/torso.png" alt="torso" /></button></li>
 						<li><button><img src="images/torso.png" alt="torso" /></button></li>
@@ -34,7 +34,7 @@ Build a Snowman <i class="fa fa-snowflake-o" aria-hidden="true"></i></h1>
 						<li><button><img src="images/torso.png" alt="torso" /></button></li>
 					</ul>
 					<hr class="divider">
-					<ul class="scroll-list part-subset lower-bodies">
+					<ul class="part-subset lower-bodies">
 						<li><button><img src="images/bottom.png" alt="bottom" /></button></li>
 						<li><button><img src="images/bottom.png" alt="bottom" /></button></li>
 						<li><button><img src="images/bottom.png" alt="bottom" /></button></li>
@@ -44,18 +44,18 @@ Build a Snowman <i class="fa fa-snowflake-o" aria-hidden="true"></i></h1>
 					<hr class="divider">
 					<h2 class="snowman-name">Snowman Name</h2>
 					<input type="text" id="snowman-name" name="snowman-name" placeholder="Name Your Snowman">
-					<input type="submit" id="submit" name="submit" value="Save Your Snowman">
+					<input type="button" id="submit" name="submit" value="Save Your Snowman">
 				</div>
 				<section class="snowman-display">
 						<div class="snowman-image">
 							<div class="snowman-background">
 								<input class="prev" type="button" value="<">
 								<ul class="backgrounds">
-									<li></li>
-									<li></li>
-									<li></li>
-									<li></li>
-									<li></li>
+									<li class="curr"><img src="images/background.png" /></li>
+									<li class="next"><img src="images/background.png" /></li>
+									<li><img src="images/background.png" /></li>
+									<li><img src="images/background.png" /></li>
+									<li class="prev"><img src="images/background.png" /></li>
 								</ul>
 								<input class="next" type="button" value=">">
 							</div>
@@ -70,6 +70,10 @@ Build a Snowman <i class="fa fa-snowflake-o" aria-hidden="true"></i></h1>
 			</div>
 		</section>
 		<footer>
+			<script
+			  src="https://code.jquery.com/jquery-3.1.1.min.js"
+			  integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+			  crossorigin="anonymous"></script>
 			<script src="main.js" charset="utf-8"></script>
 		</footer>
 	</body>
